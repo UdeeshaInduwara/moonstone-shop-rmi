@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.jewelryshoprmi.controller.PlaceOrderController">
+   <children>
+      <TableView fx:id="tblJewelry" layoutX="20.0" layoutY="82.0" onMouseClicked="#selectJewelry" prefHeight="173.0" prefWidth="910.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Jew ID" />
+          <TableColumn prefWidth="144.0" text="Name" />
+            <TableColumn prefWidth="126.0" text="Metal" />
+            <TableColumn prefWidth="140.0" text="Carat" />
+            <TableColumn prefWidth="117.0" text="Weight" />
+            <TableColumn prefWidth="122.0" text="Size" />
+            <TableColumn prefWidth="171.0" text="Price" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblCustomers" layoutX="20.0" layoutY="331.0" onMouseClicked="#selectCustomer" prefHeight="186.0" prefWidth="497.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Cust ID" />
+          <TableColumn prefWidth="158.0" text="Name" />
+            <TableColumn prefWidth="112.0" text="Country" />
+            <TableColumn prefWidth="145.0" text="Passport No" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblSelectedJewelry" layoutX="581.0" layoutY="296.0" onMouseClicked="#removeSelectedJewelry" prefHeight="186.0" prefWidth="344.0">
+        <columns>
+          <TableColumn prefWidth="102.0" text="Jewelry ID" />
+          <TableColumn prefWidth="122.0" text="Name" />
+            <TableColumn prefWidth="115.0" text="Price" />
+        </columns>
+      </TableView>
+      <TextField layoutX="776.0" layoutY="492.0" promptText="Total" />
+      <JFXTextField fx:id="txtCustName" layoutX="22.0" layoutY="529.0" promptText="Name" />
+      <JFXTextField fx:id="txtCountry" layoutX="170.0" layoutY="529.0" promptText="Country" />
+      <JFXTextField fx:id="txtPassportNo" layoutX="317.0" layoutY="529.0" promptText="Passport Number" />
+      <JFXTextField layoutX="635.0" layoutY="529.0" promptText="Payment" />
+      <JFXTextField layoutX="783.0" layoutY="529.0" promptText="Balance" />
+      <JFXButton buttonType="RAISED" graphicTextGap="10.0" layoutX="776.0" layoutY="574.0" onAction="#saveOrder" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: orange;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Ok_30px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="896.0" layoutY="3.0" onAction="#closeWindow" prefHeight="40.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Cancel_30px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="20.0" layoutY="271.0" prefHeight="3.0" prefWidth="430.0" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="460.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/Chevron%20Down_30px.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="495.0" layoutY="270.0" prefHeight="3.0" prefWidth="430.0" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="531.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/Chevron%20Left_30px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="531.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/Chevron%20Right_30px.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="543.0" layoutY="278.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="6.0" />
+      <Separator layoutX="543.0" layoutY="385.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+      <Separator layoutX="543.0" layoutY="455.0" orientation="VERTICAL" prefHeight="102.0" prefWidth="6.0" />
+      <HBox layoutX="22.0" layoutY="46.0" prefHeight="25.0" prefWidth="910.0" spacing="5.0">
+         <children>
+            <TextField promptText="Jewelry ID" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField layoutX="10.0" layoutY="10.0" promptText="Name" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField layoutX="159.0" layoutY="10.0" promptText="Metal" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField layoutX="308.0" layoutY="10.0" promptText="Carat" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField layoutX="457.0" layoutY="10.0" promptText="Weight" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField layoutX="606.0" layoutY="10.0" promptText="Size" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="21.0" layoutY="298.0" prefHeight="25.0" prefWidth="487.0" spacing="5.0">
+         <children>
+            <TextField promptText="Name" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField layoutX="10.0" layoutY="10.0" promptText="Country" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField layoutX="159.0" layoutY="10.0" promptText="Passport No" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

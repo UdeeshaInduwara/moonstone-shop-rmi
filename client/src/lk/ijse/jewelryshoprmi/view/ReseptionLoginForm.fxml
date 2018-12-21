@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="462.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.jewelryshoprmi.controller.ReceptionLoginController">
+   <children>
+      <TextField layoutX="61.0" layoutY="313.0" prefHeight="25.0" prefWidth="293.0" promptText="User Name" />
+      <PasswordField layoutX="61.0" layoutY="358.0" prefHeight="25.0" prefWidth="293.0" promptText="Password" />
+      <JFXButton buttonType="RAISED" layoutX="280.0" layoutY="405.0" onAction="#logIn" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: orange;" text="Log In">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/Circled%20User%20Male_30px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/Password_30px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="314.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/jewellery-making-image.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="324.0" layoutY="8.0" onAction="#closeWindow" prefHeight="40.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Cancel_30px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
